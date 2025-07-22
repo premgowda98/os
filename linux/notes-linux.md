@@ -68,9 +68,9 @@ Ubuntu uses **systemd** to manage services, similar to how macOS uses `launchd`.
 
 3. **For System Service:** Copy to system bin directory
    ```bash
-   sudo cp simplego /usr/local/bin/
-   sudo chmod +x /usr/local/bin/simplego
-   sudo chown root:root /usr/local/bin/simplego
+   sudo cp simplego /usr/local/bin/simplego
+   sudo chmod -R +x /usr/local/bin/simplego
+   sudo chown -R root:root /usr/local/bin/simplego
    ```
 
 ---
@@ -129,7 +129,7 @@ After=multi-user.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/simplego
+ExecStart=/usr/local/bin/simplego/simplego
 User=root
 Group=root
 StandardOutput=file:/var/log/simplego/stdout.log
